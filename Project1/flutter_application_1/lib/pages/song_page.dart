@@ -8,9 +8,16 @@ import 'package:provider/provider.dart';
 // import 'package:flutter_application_1/model/playlist_provider.dart';
 // import 'package:provider/provider.dart';
 
-class SongPage extends StatelessWidget {
+class SongPage extends StatefulWidget {
   const SongPage({super.key});
-  // double _sliderValue = 50;
+
+  @override
+  State<SongPage> createState() => _SongPageState();
+}
+
+class _SongPageState extends State<SongPage> {
+  double currVal = 50;
+
   @override
   Widget build(BuildContext context) {
     return Consumer<PlaylistProvider>(
@@ -29,6 +36,7 @@ class SongPage extends StatelessWidget {
           return Scaffold(
             backgroundColor: Theme.of(context).colorScheme.background,
             body: SafeArea(
+              top: false,
               child: Padding(
                 padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
                 child: Column(
@@ -50,6 +58,9 @@ class SongPage extends StatelessWidget {
                       ],
                     ),
                     // album artwork
+                    const SizedBox(
+                      height: 55,
+                    ),
 
                     NeuBox(
                       child: Column(
@@ -116,18 +127,25 @@ class SongPage extends StatelessWidget {
                         ),
 
                         // Slider(
-                        // SliderTheme(
-                        //   data: SliderTheme.of(context).copyWith(
-                        //     thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 0),
-                        //   ),
-                        //   child: Slider(
-                        //     min: 0,
-                        //     max: 100,
-                        //     value: 50,
-                        //     activeColor: Colors.green,
-                        //     onChanged: (value){},),
-                        // )
 
+
+                        SliderTheme(
+                          data: SliderTheme.of(context).copyWith(
+                            thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 0),
+                          ),
+                          child: Slider(
+                            min: 0,
+                            max: 100,
+                            value: currVal,
+                            activeColor: Colors.green,
+                            onChanged: (newValue){
+                              setState((){
+                                currVal = newValue;
+                              });
+                            },),
+                        )
+                        // )
+                        ,
                         // playback buttons
                         Padding(
                           padding: const EdgeInsets.all(12.0),
