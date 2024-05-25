@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
     playlistProvider.currentSongIndex = songIndex;
 
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const SongPage()));
+        context, MaterialPageRoute(builder: (context) => SongPage()));
   }
 
   @override

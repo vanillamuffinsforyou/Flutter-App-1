@@ -6,20 +6,17 @@ class PlaylistProvider extends ChangeNotifier {
     Song(
         songName: "Surround Sound",
         artistName: "21 Savage",
-        albumArtImagePath:
-            "C:/Users/Harsh Bhardwaj/Desktop/Flutter/Project1/flutter_application_1/assets/Image1.jpg",
+        albumArtImagePath: "assets/image/Image1.jpg",
         audiopath: "audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
     Song(
         songName: "TBSM",
         artistName: "Calm, ABJ Encore",
-        albumArtImagePath:
-            "C:/Users/Harsh Bhardwaj/Desktop/Flutter/Project1/flutter_application_1/assets/Image1.jpg",
+        albumArtImagePath: "assets/image/Image1.jpg",
         audiopath: "audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
     Song(
         songName: "JackMan",
         artistName: "Jackharlow",
-        albumArtImagePath:
-            "C:/Users/Harsh Bhardwaj/Desktop/Flutter/Project1/flutter_application_1/assets/Image1.jpg",
+        albumArtImagePath: "assets/image/Image1.jpg",
         audiopath: "audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
   ];
 
