@@ -12,17 +12,25 @@ class SettingsPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(' S e t t i n g s '),
       ),
-       body: Container(
-        decoration: BoxDecoration(color: Theme.of(context).colorScheme.secondary, borderRadius: BorderRadius.circular(12)),
-        padding: const EdgeInsets.all(16),
-        margin: const EdgeInsets.all(25),
-        child: Row(children: [
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween
-          const Text(" D a r k  M o d e", style: TextStyle(fontWeight: FontWeight.normal)),
-          CupertinoSwitch(value: Provider.of<ThemeProvider>(context , listen: false).isDarkMode, 
-          onChanged: (value) => Provider.of<ThemeProvider>(context , listen: false).toggleTheme())
-        ],)
-        ),
-       );
+      body: Container(
+          decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.secondary,
+              borderRadius: BorderRadius.circular(12)),
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.all(25),
+          child: Row(
+            children: [
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween
+              const Text(" P i n k  M o d e",
+                  style: TextStyle(fontWeight: FontWeight.normal)),
+              CupertinoSwitch(
+                  value: Provider.of<ThemeProvider>(context, listen: false)
+                      .isDarkMode,
+                  onChanged: (value) =>
+                      Provider.of<ThemeProvider>(context, listen: false)
+                          .toggleTheme())
+            ],
+          )),
+    );
   }
 }
