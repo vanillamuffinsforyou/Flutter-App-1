@@ -8,17 +8,17 @@ class PlaylistProvider extends ChangeNotifier {
         songName: "Surround Sound",
         artistName: "21 Savage",
         albumArtImagePath: "assets/image/Image1.jpg",
-        audiopath: "assets/audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
+        audiopath: "audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
     Song(
         songName: "TBSM",
         artistName: "Calm, ABJ Encore",
         albumArtImagePath: "assets/image/Image1.jpg",
-        audiopath: "assets/audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
+        audiopath: "audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
     Song(
         songName: "JackMan",
         artistName: "Jackharlow",
         albumArtImagePath: "assets/image/Image1.jpg",
-        audiopath: "assets/audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
+        audiopath: "audio/Surround Sound-(PagalSongs.Com.IN).mp3"),
   ];
 
   int? _currentSongIndex;
